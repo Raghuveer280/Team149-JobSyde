@@ -45,5 +45,14 @@ public class AppController {
 	{
 		session.invalidate();
 	}
-	
+	@GetMapping("/hire")
+	public String hire()
+	{
+		return "hire";
+	}
+	@GetMapping("/contact1")
+	public String contact1()
+	{
+		return "contact1";
+	}
 }
