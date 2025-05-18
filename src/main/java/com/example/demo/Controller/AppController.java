@@ -20,6 +20,14 @@ public class AppController {
 		}
 		return "index";
 	}
+	@GetMapping("/home")
+	public String home(HttpSession session,Model m)
+	{
+		String phn=(String)session.getAttribute("username");
+		if(phn!=null)
+			m.addAttribute("logged","login");
+		return "home";
+	}
 	@GetMapping("/login")
 	public String login()
 	{
@@ -55,4 +63,5 @@ public class AppController {
 	{
 		return "contact1";
 	}
+	
 }

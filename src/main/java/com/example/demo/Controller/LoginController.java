@@ -67,7 +67,7 @@ public class LoginController {
         if (!cr.isEmpty()) {
             session.setAttribute("username", phnno); // Corrected variable
             session.setAttribute("role", "customer");
-            return "redirect:/";
+            return "redirect:/home";
         } else {
             m.addAttribute("msg", "Invalid Password");
             return "login";
@@ -100,7 +100,7 @@ public class LoginController {
 
             Jobseeker js = new Jobseeker(Aadharno, FirstName, LastName, JobType, Description, city, email, phn, pass, String.format("%.1f", rating));
             jserve.insertCustomer(js);
-            session.setAttribute("username", phn); // Corrected
+            session.setAttribute("username", phn); 
             session.setAttribute("role", "jobseeker");
         } else {
             m.addAttribute("msg", "Passwords Not Matching");
@@ -122,9 +122,9 @@ public class LoginController {
 
         List<Jobseeker> js = jserve.Search(phn, password);
         if (!js.isEmpty()) {
-            session.setAttribute("username", phn); // Corrected
+            session.setAttribute("username", phn); 
             session.setAttribute("role", "jobseeker");
-            return "redirect:/";
+            return "redirect:/home";
         } else {
             m.addAttribute("msg", "Invalid Password");
             return "servicelogin";
