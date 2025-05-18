@@ -93,7 +93,39 @@ public class JobController {
 
         return "applyjob";
     }
+    //for search apply
+    @GetMapping("/getJob1")
+    public String getJob1(@RequestParam String phn,@RequestParam String jobtitle, HttpSession session, Model m) {
+        String seekerPhn = (String) session.getAttribute("username");
+        if (seekerPhn == null) {
+            return "redirect:/serviceLogin";
+        }
 
+        List<Jobseeker> seekerList = jsserve.searchByPhn(seekerPhn);
+        if (seekerList == null || seekerList.isEmpty()) {
+            session.invalidate();
+            return "redirect:/serviceLogin";
+        }
+
+        Jobseeker js = seekerList.get(0);
+
+        Applied application = new Applied(
+                js.getFirstName(),
+                js.getLastName(),
+                js.getJobType(),
+                js.getDescription(),
+                js.getCity(),
+                js.getPhn(),
+                phn,
+                js.getRating()
+        );
+
+        aserve.insert(application);
+        m.addAttribute("msg", "Successfully Applied!");
+        Iterable<PostJob> jobs = jserve.SearchJob(jobtitle);
+        m.addAttribute("records", jobs);
+        return "search";
+    }
     // Search Jobs by Title or Company
     @PostMapping("/search")
     public String search(@RequestParam String temp, Model m) {
