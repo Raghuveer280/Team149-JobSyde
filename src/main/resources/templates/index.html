@@ -505,10 +505,10 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a th:href="@{/}" class="nav-link active">Home</a></li>
-        <li><a th:href="@{/hire}" class="nav-link">Book Services</a></li>
-        <li><a th:href="@{/postjob}" class="nav-link">Post Jobs</a></li>
-        <li><a th:href="@{/applyjob}" class="nav-link">Apply Jobs</a></li>
-        <li><a th:href="@{/dashboard}" class="nav-link">Dashboard</a></li>
+        <li><a th:href="@{/login}" class="nav-link">Book Services</a></li>
+        <li><a th:href="@{/login}" class="nav-link">Post Jobs</a></li>
+        <li><a th:href="@{/serviceLogin}" class="nav-link">Apply Jobs</a></li>
+        <li><a th:href="@{/login}" class="nav-link">Dashboard</a></li>
         <li><a th:href="@{/contact1}" class="nav-link">Contact Us</a></li>
       </ul>
       <div class="auth-btn">
@@ -551,7 +551,7 @@
         </div>
       </div>
       <span class="get-an-appoinment">
-        <button class="top-sub-btn"><i class="fas fa-calendar-check"></i> Get an Appointment</button>
+        <button class="top-sub-btn"><i class="fas fa-calendar-check"></i><a th:href="@{/hire}">Get an Appointment</a></button>
       </span>
     </div>
   </div>

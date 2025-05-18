@@ -107,16 +107,16 @@
         <span>JOBSYDE</span>
       </div>
 	  <ul class="nav-links" id="navLinks">
-	  	          <li><a th:href="@{/home}" class="nav-link ">Home</a></li>
+	  	          <li><a th:href="@{/home}" class="nav-link">Home</a></li>
 	  	          <li><a th:href="@{/hire}" class="nav-link">Book Services</a></li>
 	  	          <li><a th:href="@{/postjob}" class="nav-link active">Post Jobs</a></li>
-	  	          <li><a th:href="@{/applyjob}" class="nav-link">Apply Jobs</a></li>
+	  	          <li><a th:href="@{/applyjob}" class="nav-link ">Apply Jobs</a></li>
 	  	          <li><a th:href="@{/dashboard}" class="nav-link">Dashboard</a></li>
-	  	          <li><a th:href="@{/contact1}" class="nav-link ">Contact Us</a></li>
+	  	          <li><a th:href="@{/contact1}" class="nav-link">Contact Us</a></li>
 	  	        </ul>
-      <div class="auth-btn">
-		<a th:href="@{/login}" class="login-btn">Logout</a>
-      </div>
+	        <div class="auth-btn">
+	  		<a th:href="@{/login}" class="login-btn">Logout</a>
+	        </div>
     </div>
   </nav>
     <br><br>
@@ -129,7 +129,7 @@
           <!-- Job Title -->
           <div>
             <label class="block text-sm font-semibold text-gray-700 mb-1">Job Title</label>
-            <input type="text" placeholder="e.g., Frontend Developer" name="jobtitle"
+            <input type="text" placeholder="e.g., Electrician" name="jobtitle"
                    class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B85D8] transition" />
           </div>
       
@@ -147,14 +147,13 @@
               <option>Full-time</option>
               <option>Part-time</option>
               <option>Contract</option>
-              <option>Internship</option>
             </select>
           </div>
       
           <!-- Location -->
           <div>
             <label class="block text-sm font-semibold text-gray-700 mb-1">Location</label>
-            <input type="text" placeholder="e.g., Remote, New York" name="location"
+            <input type="text" placeholder="e.g. New Delhi" name="location"
                    class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B85D8] transition" />
           </div>
       
@@ -168,7 +167,7 @@
           <!-- Salary -->
           <div>
             <label class="block text-sm font-semibold text-gray-700 mb-1">Salary Range</label>
-            <input type="text" placeholder="e.g., $60,000 - $80,000" name="salary"
+            <input type="text" placeholder="e.g., ₹7,000 - ₹18,000" name="salary"
                    class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0B85D8] transition" />
           </div>
         </div>

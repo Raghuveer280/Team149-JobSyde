@@ -64,4 +64,10 @@ public class AppController {
 		return "contact1";
 	}
 	
+	@GetMapping("/postjob")
+	public String postjob()
+	{
+		return "postjob";
+	}
+	
 }
