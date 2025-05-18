@@ -138,8 +138,8 @@
                             <option value="housekeeping">Housekeeping</option>
                             <option value="gardener">Gardener</option>
                             <option value="cook">Cook</option>
-                            <option value="security_guard">Security Guard</option>
-                            <option value="delivery_person">Delivery Person</option>
+                            <option value="security guard">Security Guard</option>
+                            <option value="delivery person">Delivery Person</option>
                             <option value="tailor">Tailor</option>
                             <option value="cleaner">Cleaner</option>
                             <option value="mason">Mason</option>
@@ -359,7 +359,7 @@
             if (selectedState && citiesByState[selectedState]) {
                 citiesByState[selectedState].forEach(city => {
                     const option = document.createElement('option');
-                    option.value = city.toLowerCase().replace(/\s+/g, '_');
+                    option.value = city.toLowerCase();
                     option.textContent = city;
                     citySelect.appendChild(option);
                 });
