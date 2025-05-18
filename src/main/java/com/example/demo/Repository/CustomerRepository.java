@@ -9,7 +9,8 @@ import com.example.demo.Entity.CustomerRegisteration;
 
 @Repository
 public interface CustomerRepository extends CrudRepository<CustomerRegisteration, String>{
-public List<CustomerRegisteration> findByPhnAndPassword(String phn, String pass);
+
+	public List<CustomerRegisteration> findByPhnAndPassword(String phn, String pass);
 	
 	public Boolean existsByPhn(String phn);
 }
